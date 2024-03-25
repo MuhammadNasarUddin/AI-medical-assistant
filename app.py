@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-st.title('Medicine Details')
+st.title('🩺 Medicine Details')  # Added the st.title() with an emoji
 
 client = OpenAI(api_key=os.environ['openai_api_key'])
 

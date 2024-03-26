@@ -9,10 +9,9 @@ st.title('🩺 Dr. AI')  # Added the st.title() with an emoji
 
 client = OpenAI(api_key=os.environ['openai_api_key'])
 
-medicine = st.text_input('Enter Medicine Name:')
-
-if st.button('Get Details'):
-    fetching_message = st.info('Fetching details...')
+medicine = st.text_input('Ask me about a medicine')
+if st.button('Ask'):
+    fetching_message = st.info('Processing...')
     try:
         response = client.chat.completions.create(
             model="gpt-3.5-turbo",
